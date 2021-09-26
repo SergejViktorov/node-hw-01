@@ -53,10 +53,10 @@ function invokeAction({ action, id, name, email, phone }) {
 			removeContact(id)
 				.then((contact) => {
 					if (contact) {
-						console.log(chalk.green('Contact delete'))
+						console.log(chalk.yellow('Contact removed'))
 						console.log(contact)
 					} else {
-						console.log(chalk.red('Not delete contact'))
+						console.log(chalk.red('Contact not removed!'))
 					}
 				})
 				.catch(console.error)
